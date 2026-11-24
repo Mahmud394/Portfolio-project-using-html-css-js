@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a Software Engineer from Bangladesh — Full Stack Developer skilled in PHP, Python, Django, .NET MVC, and more." />
+  <meta name="keywords" content="Software Engineer, Full Stack Developer, Bangladesh, PHP, Django, Python, .NET MVC, Portfolio" />
+  <meta name="author" content="Your Name" />
+  <meta property="og:title" content="Your Name — Software Engineer" />
+  <meta property="og:description" content="Full Stack Developer from Bangladesh building scalable, elegant web systems." />
+  <meta property="og:type" content="website" />
+  <title>Mahmud </title>
+  <!-- Favicon placeholder -->
+<link rel="icon"
+href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='1.8' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Crect width='100' height='100' fill='%230d1021'/%3E%3Ctext x='50%25' y='55%25' 
+text-anchor='middle' dominant-baseline='middle' font-size='58' font-family='Arial' font-weight='900'%3E%3Ctspan fill='%2300ffff' filter='url(%23glow)'%3E%26lt;%3C/tspan%3E%3Ctspan fill='white'%3EM%3C/tspan%3E%3Ctspan fill='%2300ffff' 
+filter='url(%23glow)'%3E%26gt;%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <!-- Google Fonts: Syne (display) + JetBrains Mono (code) + Outfit (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ LOADER ═══ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-bar"></div>
+      <span class="loader-text">Initializing...</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ CANVAS BG ═══ -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ═══════════════════════════════════════════ SCROLL PROGRESS ═══ -->
+  <div id="scroll-progress"></div>
+
+  <!-- ═══════════════════════════════════════════ NAVBAR ═══ -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>Mahmud<span class="logo-bracket">/&gt;</span>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Journey</a></li>
+      <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ HERO ═══ -->
+  <section id="hero" class="section">
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-left reveal-left">
+        <div class="hero-label">
+          <span class="pulse-dot"></span>
+          Available for hire
+        </div>
+        <h1 class="hero-name">Hi, I'm <span class="name-glow">Mahmud Un Nabi</span></h1>
+        <div class="hero-role">
+          <span class="role-prefix">&gt;&nbsp;</span>
+          <span id="typed-text"></span><span class="cursor-blink">_</span>
+        </div>
+        <p class="hero-tagline">
+          Crafting scalable systems &amp; elegant interfaces — one commit at a time.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="ph ph-folder-open"></i> View Projects
+          </a>
+          <a href="cv.pdf" download class="btn btn-secondary">
+            <i class="ph ph-download-simple"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <i class="ph ph-chat-circle"></i> Contact Me
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Mahmud394" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="ph ph-github-logo"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mahmud-un-nabi-056808285/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="ph ph-linkedin-logo"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook">
+            <i class="ph ph-facebook-logo"></i>
+          </a>
+          <a href="mailto:unmahmud@email.com" class="social-icon" aria-label="Email">
+            <i class="ph ph-envelope-simple"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-right reveal-right">
+        <div class="profile-frame">
+          <div class="profile-orbit"></div>
+          <div class="profile-orbit orbit-2"></div>
+          <div class="profile-image-wrap">
+            <div class="profile-image-wrap">
+                <img src="mahmud.png" alt="Mahmud Un Nabi">
+             </div>
+          </div>
+          <div class="profile-badge badge-1"><i class="ph ph-code"></i> Full Stack</div>
+          <div class="profile-badge badge-2"><i class="ph ph-database"></i> Backend</div>
+          <div class="profile-badge badge-3"><i class="ph ph-star"></i> 4+ Projects</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ ABOUT ═══ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01. WHO AM I</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p>
+            I'm a passionate <strong>Software Engineering student</strong> from <strong>Bangladesh</strong>, deeply fascinated by building systems that are not only functional but architecturally sound and visually delightful. My journey in software began with curiosity about how things work under the hood — and that curiosity has never stopped.
+          </p>
+          <p>
+            I thrive at the intersection of <strong>backend engineering</strong> and <strong>clean UI design</strong>. Whether it's crafting a robust PHP backend, modeling a database schema, or implementing design patterns like MVC and SOLID principles, I approach every problem with precision and intent.
+          </p>
+          <p>
+            My passion lies in building <strong>scalable, maintainable systems</strong> — from monolithic applications to exploring microservice architectures. When I'm not coding, you'll find me analyzing football tactics or diving deeper into software architecture concepts.
+          </p>
+          <div class="about-tags">
+            <span class="tag">🇧🇩 Bangladesh</span>
+            <span class="tag">⚙️ Backend Focused</span>
+            <span class="tag">🏗️ Architecture Nerd</span>
+            <span class="tag">⚽ Football Fan</span>
+          </div>
+        </div>
+        <div class="about-skills reveal-right">
+          <h3 class="skills-label">Core Proficiencies</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>PHP & MySQL</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>Python & Django</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>JavaScript</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>.NET MVC</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label"><span>System Design</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SKILLS ═══ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02. WHAT I KNOW</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+      <div class="skills-categories">
+
+        <!-- Frontend -->
+        <div class="skill-category reveal">
+          <h3 class="category-title"><i class="ph ph-monitor"></i> Frontend</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><div class="skill-icon html-icon">&#60;/&#62;</div><span>HTML5</span></div>
+            <div class="skill-card"><div class="skill-icon css-icon">&#123;&#125;</div><span>CSS3</span></div>
+            <div class="skill-card"><div class="skill-icon js-icon">JS</div><span>JavaScript</span></div>
+            <div class="skill-card"><div class="skill-icon tw-icon">TW</div><span>Tailwind CSS</span></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category reveal">
+          <h3 class="category-title"><i class="ph ph-terminal"></i> Backend</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><div class="skill-icon php-icon">PHP</div><span>PHP</span></div>
+            <div class="skill-card"><div class="skill-icon py-icon">Py</div><span>Python</span></div>
+            <div class="skill-card"><div class="skill-icon dj-icon">DJ</div><span>Django</span></div>
+            <div class="skill-card"><div class="skill-icon net-icon">.NET</div><span>.NET MVC</span></div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-category reveal">
+          <h3 class="category-title"><i class="ph ph-database"></i> Database</h3>
+          <div class="skills-grid">
+            <div class="skill-card"><div class="skill-icon mysql-icon">SQL</div><span>MySQL</span></div>
+          </div>
+        </div>
+
+        <!-- Concepts -->
+        <div class="skill-category reveal">
+          <h3 class="category-title"><i class="ph ph-cube"></i> Architecture & Concepts</h3>
+          <div class="skills-grid concepts-grid">
+            <div class="skill-card concept-card"><i class="ph ph-circles-three"></i><span>OOP</span></div>
+            <div class="skill-card concept-card"><i class="ph ph-layout"></i><span>MVC Pattern</span></div>
+            <div class="skill-card concept-card"><i class="ph ph-stack"></i><span>SOLID Principles</span></div>
+            <div class="skill-card concept-card"><i class="ph ph-graph"></i><span>Microservices</span></div>
+            <div class="skill-card concept-card"><i class="ph ph-building"></i><span>Monolithic Arch.</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ PROJECTS ═══ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03. WHAT I'VE BUILT</span>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <div class="project-placeholder"><i class="ph ph-calendar-check"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn"><i class="ph ph-arrow-square-out"></i> Live Preview</a>
+              <a href="https://github.com" target="_blank" class="overlay-btn overlay-btn-ghost"><i class="ph ph-github-logo"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-num">01</span>
+            <h3 class="project-title">Event Management System</h3>
+            <p class="project-desc">A comprehensive platform for creating, managing, and tracking events — featuring registration flows, admin controls, and real-time updates.</p>
+            <div class="project-stack">
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">CSS3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <div class="project-placeholder"><i class="ph ph-graduation-cap"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn"><i class="ph ph-arrow-square-out"></i> Live Preview</a>
+              <a href="https://github.com/Mahmud394" target="_blank" class="overlay-btn overlay-btn-ghost"><i class="ph ph-github-logo"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-num">02</span>
+            <h3 class="project-title">Student Management System</h3>
+            <p class="project-desc">Full-featured academic management tool for tracking student records, courses, attendance, grades, and reports with role-based access.</p>
+            <div class="project-stack">
+              <span class="stack-tag">Django</span>
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <div class="project-placeholder"><i class="ph ph-arrows-clockwise"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn"><i class="ph ph-arrow-square-out"></i> Live Preview</a>
+              <a href="https://github.com/Mahmud394" target="_blank" class="overlay-btn overlay-btn-ghost"><i class="ph ph-github-logo"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-num">03</span>
+            <h3 class="project-title">CRUD PHP Application</h3>
+            <p class="project-desc">A clean, structured CRUD application following MVC and OOP principles, demonstrating solid backend architecture and database management.</p>
+            <div class="project-stack">
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">OOP</span>
+              <span class="stack-tag">MVC</span>
+              <span class="stack-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal">
+          <div class="project-image">
+            <div class="project-placeholder"><i class="ph ph-chart-bar"></i></div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn"><i class="ph ph-arrow-square-out"></i> Live Preview</a>
+              <a href="https://github.com/Mahmud394" target="_blank" class="overlay-btn overlay-btn-ghost"><i class="ph ph-github-logo"></i> GitHub</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-num">04</span>
+            <h3 class="project-title">Responsive Admin Dashboard</h3>
+            <p class="project-desc">A modern, fully responsive admin interface with data tables, charts, sidebar navigation, and a clean dark UI design system.</p>
+            <div class="project-stack">
+              <span class="stack-tag">HTML</span>
+              <span class="stack-tag">CSS3</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ STATS ═══ -->
+  <section id="stats" class="section section-stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="10">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="12">0</div>
+          <div class="stat-label">Technologies Learned</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="1200">0</div>
+          <div class="stat-label">Hours of Coding</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="8">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ EXPERIENCE / JOURNEY ═══ -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">04. MY PATH</span>
+        <h2 class="section-title">Journey & Education</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2022 — Present</span>
+            <h3>Software Engineering Student</h3>
+            <p>Pursuing a degree in Software Engineering, mastering fundamentals of algorithms, data structures, system design, and full-stack development.</p>
+            <div class="timeline-tags"><span>University</span><span>CS Fundamentals</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2023</span>
+            <h3>Web Development Projects</h3>
+            <p>Began building real-world PHP and MySQL projects including management systems, applying MVC architecture and CRUD operations professionally.</p>
+            <div class="timeline-tags"><span>PHP</span><span>MySQL</span><span>MVC</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2023 — 2024</span>
+            <h3>Backend Development Practice</h3>
+            <p>Expanded into Python and Django, built scalable REST-style backends, and explored .NET MVC for enterprise-level development patterns.</p>
+            <div class="timeline-tags"><span>Django</span><span>Python</span><span>.NET MVC</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-year">2024 — Present</span>
+            <h3>Database & System Design</h3>
+            <p>Deep-dived into database design, normalization, performance optimization, SOLID principles, and exploring microservice vs. monolithic architecture trade-offs.</p>
+            <div class="timeline-tags"><span>System Design</span><span>SOLID</span><span>Microservices</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ SERVICES ═══ -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">05. WHAT I OFFER</span>
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-globe"></i></div>
+          <h3>Web Development</h3>
+          <p>End-to-end web application development — from concept to deployment, crafted with best practices and clean architecture.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-terminal-window"></i></div>
+          <h3>Backend Development</h3>
+          <p>Robust, scalable server-side systems using PHP, Python/Django, and .NET MVC — with clean API design and business logic.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-database"></i></div>
+          <h3>Database Design</h3>
+          <p>Well-structured relational database schemas, query optimization, and data modeling for high-performance applications.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-paint-brush"></i></div>
+          <h3>Responsive UI Design</h3>
+          <p>Mobile-first, pixel-perfect UI implementation using modern CSS, Tailwind, and clean HTML semantic markup.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="ph ph-chart-line-up"></i></div>
+          <h3>Dashboard Development</h3>
+          <p>Feature-rich admin dashboards with data visualization, user management, and intuitive controls for complex systems.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ CONTACT ═══ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">06. GET IN TOUCH</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-left">
+          <p class="contact-intro">Have a project in mind or want to collaborate? Let's talk — I'm always open to exciting opportunities.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="ph ph-envelope-simple"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:unmahmud@email.com" class="contact-value">unmahmud@email.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="ph ph-map-pin"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Bangladesh 🇧🇩</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="ph ph-clock"></i></div>
+              <div>
+                <span class="contact-label">Availability</span>
+                <span class="contact-value">Open to work &amp; freelance</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/Mahmud394" target="_blank" class="social-icon"><i class="ph ph-github-logo"></i></a>
+            <a href="https://www.linkedin.com/in/mahmud-un-nabi-056808285/" target="_blank" class="social-icon"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-icon"><i class="ph ph-facebook-logo"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-right" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="unmahmud@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="ph ph-paper-plane-tilt"></i> Send Message
+          </button>
+          <div id="form-status" class="form-status"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>YN<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-copy">© 2025 Your Name — Built with passion from Bangladesh 🇧🇩</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Mahmud394" target="_blank" class="social-icon"><i class="ph ph-github-logo"></i></a>
+          <a href="https://www.linkedin.com/in/mahmud-un-nabi-056808285/" target="_blank" class="social-icon"><i class="ph ph-linkedin-logo"></i></a>
+          <a href="https://facebook.com" target="_blank" class="social-icon"><i class="ph ph-facebook-logo"></i></a>
+          <a href="mailto:unmahmud@email.com" class="social-icon"><i class="ph ph-envelope-simple"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Back to top">
+      <i class="ph ph-arrow-up"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
